@@ -1,0 +1,28 @@
+name: Template CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  structure-and-specs:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Validate repository and specs
+        run: python3 scripts/check_specs.py
+      - name: Compile Python validation script
+        run: python3 -m py_compile scripts/check_specs.py
+
+# When using this template for an application, add stack-specific
+# formatting, lint, type checking, unit/integration/e2e and security jobs.
+# Pin third-party actions to reviewed full commit SHAs before production use.
