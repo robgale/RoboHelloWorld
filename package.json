@@ -1,0 +1,14 @@
+{
+  "name": "robo-hello-world",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Hello World demo built from RoboDevAgentTemplate",
+  "scripts": {
+    "test": "node --test",
+    "check": "node --check src/app.js && node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
