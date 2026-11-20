@@ -1,0 +1,11 @@
+:root { color-scheme: dark; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+* { box-sizing: border-box; }
+body { min-height: 100vh; margin: 0; display: grid; place-items: center; padding: 1.5rem; background: radial-gradient(circle at top, #243a65, #101828 70%); color: #f9fafb; }
+.card { width: min(100%, 34rem); padding: clamp(1.5rem, 5vw, 3rem); border: 1px solid #475467; border-radius: 1.25rem; background: #1d2939; box-shadow: 0 1rem 4rem #0005; text-align: center; }
+.eyebrow { color: #a6c8ff; letter-spacing: .08em; text-transform: uppercase; font-size: .75rem; font-weight: 700; }
+h1 { font-size: clamp(2.25rem, 8vw, 4rem); margin: .7rem 0; }
+#message { color: #d0d5dd; line-height: 1.5; min-height: 3rem; }
+button { border: 0; border-radius: .65rem; padding: .85rem 1.5rem; background: #84caff; color: #101828; font-weight: 700; font-size: 1rem; cursor: pointer; }
+button:hover { background: #b2ddff; }
+button:focus-visible { outline: 3px solid white; outline-offset: 3px; }
+.hint { font-size: .8rem; color: #98a2b3; margin-top: 1.5rem; }
